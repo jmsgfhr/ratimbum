@@ -69,7 +69,7 @@ class registerpagestate extends State<registerpage>{
     final registerbutton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xff01A0C7),
+      color: Colors.orange,
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -87,7 +87,7 @@ class registerpagestate extends State<registerpage>{
     return Scaffold( 
       appBar: AppBar(
         title: Text("Cadastro"),
-        backgroundColor: Color(0xff01A0C7)
+        backgroundColor: Colors.orange
       ),
       body: Center(
         child: Container(

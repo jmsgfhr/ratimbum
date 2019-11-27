@@ -3,13 +3,8 @@ import 'package:ratimbum2/network/login.dart';
 import 'package:ratimbum2/register.dart';
 import 'package:ratimbum2/sucesspage.dart';
 import 'package:ratimbum2/model/globals.dart' as globals;
-import 'package:sqflite/sqflite.dart';
 
-import 'model/db_test.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+class LoginPage extends StatelessWidget {
 
 
   
@@ -32,7 +27,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Ra Tim Bum'),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -58,12 +52,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
-  _MyHomePageState(){
-    if(globals.database == null){
-    globals.database = db.newDb();
 
-    }
-  }
   @override
   Widget build(BuildContext context) {
 
@@ -97,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: (){
+          globals.isloggedin = true;
           loginhandler.sign_in(context, emailController.text, passwordController.text);
           Navigator.push(context, MaterialPageRoute(builder: (context) => sucesspage(emailController.text)));
         },
@@ -107,23 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
 
-    final registerbutton = Material(
-      elevation: 5.0,
-      borderRadius: BorderRadius.circular(30.0),
-      color: Color(0xff01A0C7),
-      child: MaterialButton(
-        minWidth: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context) => registerpage()));
-        },
-        child: Text("Cadastre-se", 
-        textAlign: TextAlign.center,
-        style: TextStyle(color: Color(0xfafafaff)),
-
-        ),
-      ),
-    );
 
 
     return Scaffold(
@@ -150,8 +123,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 passwordField, 
                 SizedBox(height: 25.0),
                 loginButton,
-                SizedBox(height: 25.0),
-                registerbutton
               ],        
             ),
           ),

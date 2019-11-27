@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "740304881416",
+    "firebase_url": "https://ra-tim-bum-992e9.firebaseio.com",
+    "project_id": "ra-tim-bum-992e9",
+    "storage_bucket": "ra-tim-bum-992e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740304881416:android:7c26ed1a338f2e0c0e4ebd",
+        "android_client_info": {
+          "package_name": "com.example.ratimbum2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740304881416-2d871lofdmrevfnailm68iaie9tjc2eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwe58t7wttEgwWuC-PhyDdJsN-uzxlmd8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740304881416-2d871lofdmrevfnailm68iaie9tjc2eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

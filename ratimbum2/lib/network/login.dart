@@ -36,7 +36,6 @@ class loginhandler{
     var response = await http.post(url, headers: headers, body: json);
     print(response.statusCode);    
     print(response.body);
-    print(url);
     if(response.statusCode==200)
       //toast.Toast.show("login realizado com sucesso", context,duration: toast.Toast.LENGTH_LONG, gravity: toast.Toast.BOTTOM);
       return 1;
